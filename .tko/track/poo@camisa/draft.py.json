@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-07_02-24-43",
+            "content": "@@ -349,17 +349,27 @@\n         \n-%0A\n+else: %0A    \n         \n@@ -404,16 +404,22 @@\n         \n+return\n %0A%0Acamisa\n@@ -455,19 +455,17 @@\n am() == \n-%22 %22\n+0\n :%0A    pr\n@@ -612,15 +612,20 @@\n .getTam(\n-)\n+size) \n ,%22%5Cn%22)\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-10-07_02-32-08",
+            "content": "class Blusa:\n    def __init__(self):\n        self.__tam = \" \"\n    def getTam(self) -> str:\n        return self.__tam\n    def setTam(self, valor: str):\n        if valor == \"pp\" or valor == \"p\" or valor == \"m\" or valor == \"g\" or valor == \"gg\" or valor == \"xg\":\n            self.__tam = valor\n            print (\"\u00d3tima escolha!\\n\")\n            return\n        \n        print(\"valor invalido\")\n            \n\ncamisa = Blusa()\n\nwhile camisa.getTam() == \" \":\n    print(\"Digite o tamanho da camisa:\")\n    size = input()\n    camisa.setTam(size)\n\nprint (\"\\nOpa cumpade tu comprou uma blusa tamanho: \", camisa.getTam(),\"\\n\")",
+            "lines": "22"
+        }
+    ]
+}
