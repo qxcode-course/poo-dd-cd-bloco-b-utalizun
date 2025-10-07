@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-06_20-01-09",
+            "content": "\nclass Chinela:\n    # inicializa\u00e7\u00e3o da chinela com valor de tamanho 0\n    def __init__(self):    # isso \u00e9 o construtor em python\n        self.__tamanho = 0 # quando tem __ na frente em python \u00e9 privado\n\n    def getTamanho(self): # m\u00e9todos em python tem self como primeiro atributo\n        return self.__tamanho\n\n    def setTamanho(self, valor: int):\n        # implementar os testes de valor e disparar os avisos caso necess\u00e1rio\n\nloop principal\nchinela = Chinela() # criando chinela com valor tamanho padr\u00e3o\n\nwhile chinela.getTamanho() == 0: # mantendo usu\u00e1rio no loop\n    print(\"Digite seu tamanho de chinela\")\n    tamanho = int(input()) # lendo a resposta e convertendo pra inteiro\n    chinela.setTamanho(tamanho) # tentando atribuir e disparando \n\nprint(\"Parabens, voc\u00ea comprou uma chinela tamanho\", chinela.getTamanho())",
+            "lines": "21"
+        }
+    ]
+}
