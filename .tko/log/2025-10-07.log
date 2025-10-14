@@ -10,3 +10,10 @@
 2025-10-07 02:32:08, EXEC, v:1, k:poo@camisa, mode:FREE, size:22
 2025-10-07 02:32:39, MOVE, v:1, k:poo@camisa, mode:BACK
 2025-10-07 02:33:14, SELF, v:1, k:poo@camisa, rate:100, alone:10, study:60
+2025-10-07 19:00:53, MOVE, v:1, k:poo@roupa, mode:DOWN
+2025-10-07 19:07:51, MOVE, v:1, k:poo@roupa, mode:PICK
+2025-10-07 19:07:53, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:22
+2025-10-07 19:09:18, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:22
+2025-10-07 19:09:20, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0
+2025-10-07 19:09:41, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:23
+2025-10-07 19:24:09, EXEC, v:1, k:poo@roupa, mode:FULL, rate:0, size:21
