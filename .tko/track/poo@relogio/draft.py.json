@@ -102,8 +102,323 @@
         },
         {
             "label": "2025-10-14_15-54-39",
-            "content": "class Relogio:\n    def __init__(self):\n        self.__hora = 0\n        self.__min = 0\n        self.__seg = 0\n\n    def get_hora(self)-> int:\n        return self.__hora\n    def get_min(self)-> int:\n        return self.__min\n    def get_seg(self)-> int:\n        return self.__seg\n    \n    def set_hora(self, valor: int):\n        if valor > 23:\n            print(\"fail: hora invalida\")\n        elif valor >=0 and valor <=23: \n            self.__hora = valor\n    def set_min(self, valor: int):\n        if valor > 59:\n            print(\"fail: minuto invalido\")\n        elif valor >= 0 and valor <=59: \n            self.__min = valor\n    def set_seg(self, valor: int):\n        if valor > 59:\n            print(\"fail: segundo invalido\")\n        elif valor >= 0 and valor <=59: \n            self.__seg = valor\n\n    def __str__ (self) -> str:\n        return f\"{self.__hora:02}:{self.__min:02}:{self.__seg:02}\"\n    \ndef main():\n    time = Relogio()\n    while True: #loop infinito \n        line: str = input()\n        print (\"$\"+line)\n        args: list[str]=line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0]==\"show\":\n            print(time)\n        elif args[0]==\"set\":\n            if len(args) == 4: \n                hora = int(args[1])\n                minuto = int(args[2])\n                seg = int(args[3])\n                time.set_hora(hora)\n                time.set_min(minuto)\n                time.set_seg(seg)\n            \nif __name__ == \"__main__\":\n    main()\n",
+            "content": "@@ -1439,87 +1439,8 @@\n eg)%0A\n-                %0A        elif  args%5B0%5D==%22set%22:%0A            if time(self.__seg)%0A\n     \n",
             "lines": "54"
+        },
+        {
+            "label": "2025-10-14_18-52-44",
+            "content": "@@ -1435,16 +1435,32 @@\n eg(seg)%0A\n+                \n %0A       \n@@ -1517,26 +1517,8 @@\n seg)\n-:%0A                \n %0A   \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-10-14_18-52-57",
+            "content": "@@ -1436,16 +1436,96 @@\n g(seg)%0A%0A\n+        elif  args%5B0%5D==%22set%22:%0A            if time(self.__seg):%0A                %0A\n         \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-10-14_18-53-04",
+            "content": "@@ -1439,252 +1439,8 @@\n eg)%0A\n-        elif args%5B0%5D == %22set%22:%0A            if time.get_hora(hora) = 15 and time.get_min(minuto)=59 and time.get_seg(seg)=59:%0A                time.set_hora(hora) = 16%0A                time.set_min(minuto) = 00%0A                time.set_seg(seg)=00\n %0A   \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-10-14_18-58-14",
+            "content": "@@ -1594,12 +1594,18 @@\n ora(\n+hora) = \n 16\n-) \n %0A   \n@@ -1634,12 +1634,20 @@\n min(\n+minuto) = \n 00\n-) \n %0A   \n@@ -1676,11 +1676,15 @@\n seg(\n+seg)=\n 00\n-)\n %0A   \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-14_19-00-20",
+            "content": "@@ -1470,47 +1470,8 @@\n t%22:%0A\n-            elif args%5B0%5D == %22set%22:%0A    \n     \n@@ -1502,17 +1502,16 @@\n (hora) =\n-=\n  15 and \n@@ -1530,20 +1530,17 @@\n (minuto)\n- == \n+=\n 59 and t\n@@ -1555,20 +1555,17 @@\n seg(seg)\n- == \n+=\n 59:%0A    \n@@ -1568,36 +1568,32 @@\n                 \n- \n-   \n time.set_hora(16\n@@ -1593,21 +1593,18 @@\n hora(16)\n-%0A   \n  \n+%0A\n         \n@@ -1625,22 +1625,20 @@\n et_min(0\n-)%0A    \n+0) %0A\n         \n@@ -1659,16 +1659,17 @@\n et_seg(0\n+0\n )%0A      \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-14_19-02-00",
+            "content": "@@ -1466,17 +1466,55 @@\n  %22set%22:%0A\n-%0A\n+            elif args%5B0%5D == %22set%22:%0A    \n         \n@@ -1614,32 +1614,36 @@\n                 \n+    \n time.set_hora(16\n@@ -1652,32 +1652,36 @@\n                 \n+    \n time.set_min(0)%0A\n@@ -1676,24 +1676,28 @@\n .set_min(0)%0A\n+    \n             \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-10-14_19-02-32",
+            "content": "@@ -1462,24 +1462,25 @@\n %5D == %22set%22:%0A\n+%0A\n             \n@@ -1496,16 +1496,20 @@\n et_hora(\n+hora\n ) == 15 \n@@ -1525,16 +1525,22 @@\n get_min(\n+minuto\n ) == 59 \n@@ -1556,16 +1556,19 @@\n get_seg(\n+seg\n ) == 59:\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-10-14_19-03-13",
+            "content": "@@ -1495,20 +1495,16 @@\n et_hora(\n-self\n ) == 15 \n@@ -1520,20 +1520,16 @@\n get_min(\n-self\n ) == 59 \n@@ -1545,20 +1545,16 @@\n get_seg(\n-self\n ) == 59:\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-14_19-03-45",
+            "content": "@@ -1596,21 +1596,16 @@\n et_hora(\n-self,\n 16)%0A    \n@@ -1629,21 +1629,16 @@\n set_min(\n-self,\n 0)%0A     \n@@ -1661,21 +1661,16 @@\n set_seg(\n-self,\n 0)%0A     \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-14_19-04-48",
+            "content": "@@ -1596,16 +1596,21 @@\n et_hora(\n+self,\n 16)%0A    \n@@ -1634,16 +1634,21 @@\n set_min(\n+self,\n 0)%0A     \n@@ -1671,16 +1671,21 @@\n set_seg(\n+self,\n 0)%0A     \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-14_19-07-00",
+            "content": "@@ -1482,139 +1482,95 @@\n     \n+if \n time\n-(self.__seg) += 1%0A        %0A        if time(self.__seg) %3E 59:%0A            time(self.__seg) = 0%0A            time(self.__min) += 1\n+.get_hora(self) == 15 and time.get_min(self) == 59 and time.get_seg(self) == 59:\n %0A   \n@@ -1582,46 +1582,29 @@\n     \n-%0A\n     \n-        if \n time\n-(self.__min) %3E 59:\n+.set_hora(16)\n %0A   \n@@ -1624,25 +1624,21 @@\n time\n-(self.__min) = 0%0A\n+.set_min(0)%0A \n     \n@@ -1656,113 +1656,19 @@\n time\n-(self.__hora) += 1%0A                %0A            if self.__hora %3E 23:%0A                    self.__hora = 0%0A\n+.set_seg(0)\n %0A   \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-14_19-29-18",
+            "content": "@@ -1439,24 +1439,403 @@\n eg)%0A        \n+elif args%5B0%5D == %22set%22:%0A            time(self.__seg) += 1%0A        %0A        if time(self.__seg) %3E 59:%0A            time(self.__seg) = 0%0A            time(self.__min) += 1%0A            %0A            if time(self.__min) %3E 59:%0A                time(self.__min) = 0%0A               time(self.__hora) += 1%0A                %0A            if self.__hora %3E 23:%0A                    self.__hora = 0%0A\n %0A           \n",
+            "lines": "68"
+        },
+        {
+            "label": "2025-10-14_19-29-45",
+            "content": "@@ -798,348 +798,8 @@\n lor%0A\n-    %0A    def nextSecond (self):%0A        self.__seg += 1%0A        if self.__seg %3E 59:%0A            self.__seg = 0%0A            self.__min += 1%0A        if self.__min %3E 59:%0A            self.__min = 0%0A            self.__hora += 1%0A        if self.__hora %3C 23:%0A            self.__hora += 1%0A        if self.__hora == 23:%0A            self.__hora = 0%0A%0A\n %0A   \n@@ -1447,112 +1447,8 @@\n     \n-elif args%5B0%5D ==%22next%22:%0A            time.nextSecond()%0A        else:%0A            print(%22comando inv%C3%A1lido%22)\n %0A   \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-10-17_14-54-56",
+            "content": "@@ -980,32 +980,61 @@\n  self.__min = 0%0A\n+            self.__hora += 1%0A\n         if self.\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_14-55-12",
+            "content": "@@ -992,37 +992,8 @@\n = 0%0A\n-            self.__hora += 1%0A\n     \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-17_14-55-40",
+            "content": "@@ -1015,17 +1015,17 @@\n hora += \n-0\n+1\n %0A       \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_14-56-54",
+            "content": "@@ -1015,17 +1015,17 @@\n hora += \n-2\n+0\n %0A       \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_14-57-11",
+            "content": "@@ -1077,10 +1077,8 @@\n  += \n-0,\n 1%0A  \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_14-57-34",
+            "content": "@@ -1074,12 +1074,14 @@\n ora \n-=+ 0\n++= 0,1\n %0A   \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_14-57-59",
+            "content": "@@ -1011,25 +1011,25 @@\n f.__hora += \n-1\n+2\n %0A        if \n@@ -1073,17 +1073,17 @@\n hora =+ \n-1\n+0\n %0A       \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_14-58-38",
+            "content": "@@ -980,32 +980,61 @@\n  self.__min = 0%0A\n+            self.__hora += 1%0A\n         if self.\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_14-59-15",
+            "content": "@@ -1012,17 +1012,16 @@\n __hora %3C\n-=\n  23:%0A   \n@@ -1069,17 +1069,18 @@\n .__hora \n-%3E\n+==\n  23:%0A   \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-17_14-59-48",
+            "content": "@@ -1012,16 +1012,17 @@\n __hora %3C\n+=\n  23:%0A   \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-17_15-00-04",
+            "content": "@@ -992,37 +992,8 @@\n = 0%0A\n-            self.__hora += 1%0A\n     \n@@ -1069,18 +1069,17 @@\n .__hora \n-==\n+%3E\n  23:%0A   \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-17_15-00-47",
+            "content": "@@ -1062,34 +1062,34 @@\n     self.__hora \n-+\n =\n++\n  1%0A        if se\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_15-01-28",
+            "content": "@@ -1017,16 +1017,73 @@\n ra += 1%0A\n+        if self.__hora %3C 23:%0A            self.__hora += 1\n %0A       \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_15-01-57",
+            "content": "@@ -1021,65 +1021,8 @@\n = 1%0A\n-        if self.__hora %3C 23:%0A            self.__hora += 1\n %0A   \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-17_15-02-32",
+            "content": "@@ -984,24 +984,52 @@\n f.__min = 0%0A\n+            self.__hora += 1\n %0A        if \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_15-02-49",
+            "content": "@@ -980,32 +980,33 @@\n  self.__min = 0%0A\n+%0A\n         if self.\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_15-04-03",
+            "content": "@@ -1807,16 +1807,68 @@\n econd()%0A\n+        else:%0A            print(%22comando inv%C3%A1lido%22)%0A\n         \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-17_15-04-24",
+            "content": "@@ -1820,29 +1820,16 @@\n        %0A\n-            %0A\n if __nam\n",
+            "lines": "69"
+        },
+        {
+            "label": "2025-10-17_15-04-57",
+            "content": "@@ -988,16 +988,131 @@\n min = 0%0A\n+        if self.__hora %3C 23:%0A            self.__hora += 1%0A        if self.__hora == 23:%0A            self.__hora = 0\n %0A%0A%0A    d\n@@ -1807,16 +1807,28 @@\n econd()%0A\n+            \n %0A       \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-10-17_15-06-17",
+            "content": "@@ -795,24 +795,28 @@\n  valor%0A    %0A\n+    \n def nextSeco\n@@ -817,16 +817,17 @@\n xtSecond\n+ \n (self):%0A\n@@ -936,327 +936,59 @@\n += 1\n- # O minuto s%C3%B3 avan%C3%A7a quando o segundo estoura%0A            %0A            if self.__min %3E 59: # A hora s%C3%B3 avan%C3%A7a quando o minuto estoura%0A                self.__min = 0%0A                self.__hora += 1%0A                %0A                if self.__hora %3E 23: # O dia zera quando a hora estoura%0A                    self.__hora\n+%0A        if self.__min %3E 59:%0A            self.__min\n  = 0\n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-10-17_15-09-28",
+            "content": "@@ -795,28 +795,24 @@\n  valor%0A    %0A\n-    \n def nextSeco\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_15-09-50",
+            "content": "@@ -1257,16 +1257,17 @@\n a = 0%0A%0A%0A\n+%0A\n     def \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_15-10-33",
+            "content": "@@ -1897,33 +1897,16 @@\n eg(seg)%0A\n-                %0A\n         \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-17_15-13-05",
+            "content": "@@ -794,16 +794,476 @@\n = valor%0A\n+    %0A    def nextSecond(self):%0A        self.__seg += 1%0A        if self.__seg %3E 59:%0A            self.__seg = 0%0A            self.__min += 1 # O minuto s%C3%B3 avan%C3%A7a quando o segundo estoura%0A            %0A            if self.__min %3E 59: # A hora s%C3%B3 avan%C3%A7a quando o minuto estoura%0A                self.__min = 0%0A                self.__hora += 1%0A                %0A                if self.__hora %3E 23: # O dia zera quando a hora estoura%0A                    self.__hora = 0\n %0A%0A%0A    d\n@@ -1897,16 +1897,32 @@\n eg(seg)%0A\n+                \n %0A       \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_15-13-26",
+            "content": "@@ -798,347 +798,8 @@\n lor%0A\n-    %0A    def nextSecond(self):%0A        self.__seg += 1%0A        if self.__seg %3E 59:%0A            self.__seg = 0%0A            self.__min += 1 %0A            %0A            if self.__min %3E 59: %0A                self.__min = 0%0A                self.__hora += 1%0A                %0A                if self.__hora %3E 23: %0A                    self.__hora = 0\n %0A%0A%0A \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-10-17_15-13-46",
+            "content": "@@ -1843,67 +1843,8 @@\n ()%0A%0A\n-        else:%0A            print(%22fail: comando invalido%22)%0A%0A\n     \n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-10-17_15-14-26",
+            "content": "@@ -946,32 +946,36 @@\n        %0A        \n+    \n if self.__min %3E \n@@ -983,32 +983,36 @@\n 9: %0A            \n+   \n+ \n self.__min = 0%0A \n@@ -1002,32 +1002,36 @@\n  self.__min = 0%0A\n+    \n             self\n@@ -1060,32 +1060,40 @@\n        %0A        \n+  \n+      \n if self.__hora %3E\n@@ -1094,24 +1094,32 @@\n hora %3E 23: %0A\n+        \n             \n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-17_15-15-19",
+            "content": "@@ -1246,13 +1246,8 @@\n gio(\n-0,0,0\n )%0A  \n@@ -1471,17 +1471,16 @@\n t(time)%0A\n-%0A\n         \n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-17_15-16-09",
+            "content": "@@ -1242,16 +1242,21 @@\n Relogio(\n+0,0,0\n )%0A    wh\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-17_15-16-21",
+            "content": "@@ -121,25 +121,24 @@\n t_hora(self)\n- \n -%3E int:%0A    \n@@ -177,25 +177,24 @@\n et_min(self)\n- \n -%3E int:%0A    \n@@ -236,17 +236,16 @@\n eg(self)\n- \n -%3E int:%0A\n@@ -321,30 +321,24 @@\n       if\n- 0 %3C=\n  valor \n-%3C=\n+%3E\n  23:%0A   \n@@ -350,27 +350,36 @@\n     \n-self.__\n+print(%22fail: \n hora \n-= valor\n+invalida%22)\n %0A   \n@@ -389,53 +389,69 @@\n   el\n-se:%0A            print(%22fail: \n+if valor %3E=0 and valor %3C=23: %0A            self.__\n hora \n-invalida%22)%0A\n+= valor\n %0A   \n@@ -488,38 +488,32 @@\n :%0A        if\n- 0 %3C=\n  valor \n-%3C=\n+%3E\n  59:%0A       \n@@ -521,84 +521,110 @@\n     \n-self.__min = valor%0A        else:%0A            print(%22fail: minuto invalido%22)%0A\n+print(%22fail: minuto invalido%22)%0A        elif valor %3E= 0 and valor %3C=59: %0A            self.__min = valor\n %0A   \n@@ -669,22 +669,16 @@\n   if\n- 0 %3C=\n  valor \n-%3C=\n+%3E\n  59:\n@@ -694,84 +694,111 @@\n     \n-self.__seg = valor%0A        else:%0A            print(%22fail: segundo invalido%22)\n+print(%22fail: segundo invalido%22)%0A        elif valor %3E= 0 and valor %3C=59: %0A            self.__seg = valor\n %0A   \n@@ -849,25 +849,16 @@\n eg += 1%0A\n-        %0A\n         \n@@ -927,24 +927,25 @@\n f.__min += 1\n+ \n %0A           \n@@ -938,36 +938,32 @@\n 1 %0A            %0A\n-    \n         if self.\n@@ -969,27 +969,26 @@\n .__min %3E 59:\n-%0A \n  \n+%0A\n             \n@@ -979,34 +979,32 @@\n 9: %0A            \n-  \n self.__min = 0%0A \n@@ -998,28 +998,24 @@\n f.__min = 0%0A\n-    \n             \n@@ -1056,24 +1056,16 @@\n         \n-        \n if self.\n@@ -1072,33 +1072,26 @@\n __hora %3E 23:\n-%0A       \n  \n+%0A\n             \n@@ -1103,24 +1103,25 @@\n __hora = 0%0A%0A\n+%0A\n     def __st\n@@ -1264,26 +1264,24 @@\n ue: \n-%0A        try:%0A    \n+#loop infinito %0A\n     \n@@ -1308,64 +1308,8 @@\n t()%0A\n-        except EOFError:%0A            break%0A            %0A\n     \n@@ -1352,19 +1352,17 @@\n ist%5Bstr%5D\n- = \n+=\n line.spl\n@@ -1437,20 +1437,18 @@\n  args%5B0%5D\n- \n ==\n- \n %22show%22:%0A\n@@ -1471,16 +1471,17 @@\n t(time)%0A\n+%0A\n         \n@@ -1492,20 +1492,18 @@\n  args%5B0%5D\n- \n ==\n- \n %22set%22:%0A \n@@ -1537,33 +1537,8 @@\n 4: %0A\n-                try:%0A    \n     \n@@ -1569,20 +1569,16 @@\n rgs%5B1%5D)%0A\n-    \n         \n@@ -1623,20 +1623,16 @@\n         \n-    \n seg = in\n@@ -1646,33 +1646,8 @@\n 3%5D)%0A\n-                    %0A    \n     \n@@ -1678,20 +1678,16 @@\n a(hora)%0A\n-    \n         \n@@ -1715,20 +1715,16 @@\n minuto)%0A\n-    \n         \n@@ -1753,230 +1753,8 @@\n eg)%0A\n-                except ValueError:%0A                    print(%22fail: argumento(s) nao numerico(s)%22)%0A            else:%0A                print(%22fail: uso incorreto do comando 'set'. Esperado: set %3Ch%3E %3Cm%3E %3Cs%3E%22)%0A                \n %0A   \n@@ -1773,17 +1773,16 @@\n gs%5B0%5D ==\n- \n %22next%22:%0A\n@@ -1811,24 +1811,16 @@\n econd()%0A\n-        \n %0A       \n@@ -1826,24 +1826,10 @@\n   el\n-if args%5B0%5D != %22%22\n+se\n :%0A  \n@@ -1863,23 +1863,32 @@\n ndo \n-desconhecido%22)%0A\n+invalido%22)%0A%0A            \n %0Aif \n@@ -1917,12 +1917,13 @@\n :%0A    main()\n+%0A\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-17_15-17-04",
+            "content": "@@ -121,24 +121,25 @@\n t_hora(self)\n+ \n -%3E int:%0A    \n@@ -178,24 +178,25 @@\n et_min(self)\n+ \n -%3E int:%0A    \n@@ -238,16 +238,17 @@\n eg(self)\n+ \n -%3E int:%0A\n@@ -324,24 +324,30 @@\n       if\n+ 0 %3C=\n  valor \n-%3E\n+%3C=\n  23:%0A   \n@@ -359,36 +359,27 @@\n     \n-print(%22fail: \n+self.__\n hora \n-invalida%22)\n+= valor\n %0A   \n@@ -389,69 +389,53 @@\n   el\n-if valor %3E=0 and valor %3C=23: %0A            self.__\n+se:%0A            print(%22fail: \n hora \n-= valor\n+invalida%22)%0A\n %0A   \n@@ -472,32 +472,38 @@\n :%0A        if\n+ 0 %3C=\n  valor \n-%3E\n+%3C=\n  59:%0A       \n@@ -511,110 +511,84 @@\n     \n-print(%22fail: minuto invalido%22)%0A        elif valor %3E= 0 and valor %3C=59: %0A            self.__min = valor\n+self.__min = valor%0A        else:%0A            print(%22fail: minuto invalido%22)%0A\n %0A   \n@@ -629,24 +629,30 @@\n       if\n+ 0 %3C=\n  valor \n-%3E\n+%3C=\n  59:%0A   \n@@ -664,111 +664,84 @@\n     \n-print(%22fail: segundo invalido%22)%0A        elif valor %3E= 0 and valor %3C=59: %0A            self.__seg = valor\n+self.__seg = valor%0A        else:%0A            print(%22fail: segundo invalido%22)\n %0A   \n@@ -788,24 +788,33 @@\n .__seg += 1%0A\n+        %0A\n         if s\n@@ -883,17 +883,16 @@\n min += 1\n- \n %0A       \n@@ -889,32 +889,36 @@\n  1%0A            %0A\n+    \n         if self.\n@@ -928,18 +928,21 @@\n in %3E 59:\n- \n %0A\n+    \n         \n@@ -952,32 +952,36 @@\n  self.__min = 0%0A\n+    \n             self\n@@ -1010,32 +1010,40 @@\n        %0A        \n+        \n if self.__hora %3E\n@@ -1046,18 +1046,23 @@\n ra %3E 23:\n- \n %0A\n+      \n         \n@@ -1057,32 +1057,34 @@\n                 \n+  \n self.__hora = 0%0A\n@@ -1084,17 +1084,16 @@\n ra = 0%0A%0A\n-%0A\n     def \n@@ -1240,32 +1240,32 @@\n ue: \n-#loop infinito %0A\n+%0A        try:%0A  \n         \n line\n@@ -1260,16 +1260,18 @@\n         \n+  \n line: st\n@@ -1282,16 +1282,72 @@\n input()%0A\n+        except EOFError:%0A            break%0A            %0A\n         \n@@ -1386,17 +1386,19 @@\n ist%5Bstr%5D\n-=\n+ = \n line.spl\n@@ -1473,18 +1473,20 @@\n  args%5B0%5D\n+ \n ==\n+ \n %22show%22:%0A\n@@ -1509,17 +1509,16 @@\n t(time)%0A\n-%0A\n         \n@@ -1529,18 +1529,20 @@\n  args%5B0%5D\n+ \n ==\n+ \n %22set%22:%0A \n@@ -1572,16 +1572,41 @@\n  == 4: %0A\n+                try:%0A    \n         \n@@ -1633,16 +1633,20 @@\n rgs%5B1%5D)%0A\n+    \n         \n@@ -1691,16 +1691,20 @@\n         \n+    \n seg = in\n@@ -1714,16 +1714,41 @@\n rgs%5B3%5D)%0A\n+                    %0A    \n         \n@@ -1775,16 +1775,20 @@\n a(hora)%0A\n+    \n         \n@@ -1816,16 +1816,20 @@\n minuto)%0A\n+    \n         \n@@ -1854,16 +1854,238 @@\n eg(seg)%0A\n+                except ValueError:%0A                    print(%22fail: argumento(s) nao numerico(s)%22)%0A            else:%0A                print(%22fail: uso incorreto do comando 'set'. Esperado: set %3Ch%3E %3Cm%3E %3Cs%3E%22)%0A                \n %0A       \n@@ -2100,16 +2100,17 @@\n gs%5B0%5D ==\n+ \n %22next%22:%0A\n@@ -2139,16 +2139,24 @@\n econd()%0A\n+        \n %0A       \n@@ -2150,34 +2150,48 @@\n      %0A        el\n-se\n+if args%5B0%5D != %22%22\n :%0A            pr\n@@ -2213,32 +2213,23 @@\n ndo \n-invalido%22)%0A%0A            \n+desconhecido%22)%0A\n %0Aif \n@@ -2262,9 +2262,8 @@\n   main()\n-%0A\n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-10-17_15-17-16",
+            "content": "@@ -817,17 +817,16 @@\n xtSecond\n- \n (self):%0A\n@@ -927,24 +927,38 @@\n f.__min += 1\n+ %0A            \n %0A        if \n@@ -969,24 +969,25 @@\n .__min %3E 59:\n+ \n %0A           \n@@ -1006,35 +1006,32 @@\n = 0%0A            \n-if \n self.__hora %3C 23\n@@ -1030,13 +1030,12 @@\n ora \n-%3C 23:\n++= 1\n %0A   \n@@ -1047,32 +1047,16 @@\n         \n-self.__hora += 1\n %0A       \n@@ -1075,14 +1075,14 @@\n ora \n-==\n+%3E\n  23:\n+ \n %0A   \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-10-17_15-20-28",
+            "content": "@@ -279,323 +279,8 @@\n    %0A\n-    def nextSecond (self):%0A        self.__seg += 1%0A        if self.__seg %3E 59:%0A            self.__seg = 0%0A            self.__min += 1%0A        if self.__min %3E 59:%0A            self.__min = 0%0A            if self.__hora %3C 23:%0A                self.__hora += 1%0A        if self.__hora == 23:%0A            self.__hora = 0%0A%0A%0A\n     \n@@ -795,24 +795,339 @@\n  valor%0A    %0A\n+    def nextSecond (self):%0A        self.__seg += 1%0A        if self.__seg %3E 59:%0A            self.__seg = 0%0A            self.__min += 1%0A        if self.__min %3E 59:%0A            self.__min = 0%0A            if self.__hora %3C 23:%0A                self.__hora += 1%0A        if self.__hora == 23:%0A            self.__hora = 0%0A%0A%0A\n     def __st\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-17_15-21-06",
+            "content": "@@ -270,16 +270,334 @@\n f.__seg%0A\n+    %0A    def nextSecond (self):%0A        self.__seg += 1%0A        if self.__seg %3E 59:%0A            self.__seg = 0%0A            self.__min += 1%0A        if self.__min %3E 59:%0A            self.__min = 0%0A            if self.__hora %3C 23:%0A                self.__hora += 1%0A        if self.__hora == 23:%0A            self.__hora = 0%0A\n %0A%0A    de\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-17_15-21-38",
+            "content": "@@ -274,326 +274,8 @@\n seg%0A\n-    %0A    def nextSecond (self):%0A        self.__seg += 1%0A        if self.__seg %3E 59:%0A            self.__seg = 0%0A            self.__min += 1%0A        if self.__min %3E 59:%0A            self.__min = 0%0A            if self.__hora %3C 23:%0A                self.__hora += 1%0A        if self.__hora == 23:%0A            self.__hora = 0%0A\n %0A%0A  \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-17_15-22-49",
+            "content": "@@ -409,16 +409,194 @@\n in += 1%0A\n+        if self.__min %3E 59:%0A            self.__min = 0%0A            if self.__hora %3C 23:%0A                self.__hora += 1%0A        if self.__hora == 23:%0A            self.__hora = 0\n %0A%0A%0A    d\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-10-17_15-23-39",
+            "content": "@@ -413,217 +413,8 @@\n = 1%0A\n-                %0A    def nextSecond (self):%0A        self.__seg += 1%0A        if self.__seg %3E 59:%0A            self.__seg = 0%0A            self.__min += 1%0A        if self.__min %3E 59:%0A            self.__min = 0%0A %0A%0A\n %0A%0A%0A \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-10-17_15-24-36",
+            "content": "@@ -620,64 +620,8 @@\n  0%0A \n-       if self.__hora %3E 10:%0A            self.__hora += 1\n %0A%0A%0A%0A\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-10-17_15-25-39",
+            "content": "@@ -642,13 +642,12 @@\n ora \n- \n %3E \n-22\n+10\n :%0A  \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-10-17_15-26-04",
+            "content": "@@ -638,25 +638,25 @@\n .__hora  %3E 2\n-3\n+2\n :%0A          \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-10-17_15-26-22",
+            "content": "@@ -672,17 +672,17 @@\n hora += \n-0\n+1\n %0A%0A%0A%0A%0A   \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-10-17_15-26-53",
+            "content": "@@ -619,37 +619,8 @@\n = 0%0A\n-            self.__hora += 1%0A\n     \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-10-17_15-27-23",
+            "content": "@@ -648,28 +648,24 @@\n = 1%0A        \n-    \n if self.__ho\n@@ -670,28 +670,24 @@\n hora  %3E 23:%0A\n-    \n             \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-10-17_15-28-04",
+            "content": "@@ -702,24 +702,25 @@\n self.__hora \n++\n = 0%0A%0A%0A%0A%0A    \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-10-17_15-28-32",
+            "content": "@@ -707,17 +707,16 @@\n __hora =\n-=\n  0%0A%0A%0A%0A%0A \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-10-17_15-28-54",
+            "content": "@@ -631,35 +631,36 @@\n     self.__hora \n++\n = \n-0\n+1\n %0A            if \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-10-17_15-29-16",
+            "content": "@@ -671,17 +671,17 @@\n __hora  \n-%3C\n+%3E\n  23:%0A   \n@@ -705,20 +705,20 @@\n .__hora \n-+= 1\n+== 0\n %0A%0A%0A%0A%0A   \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-10-17_15-29-45",
+            "content": "@@ -644,12 +644,15 @@\n ra =\n-+ 1%0A\n+ 0%0A    \n     \n@@ -670,22 +670,27 @@\n .__hora \n-%3E\n+ %3C\n  23:%0A\n+    \n         \n@@ -705,31 +705,20 @@\n .__hora \n++\n = \n-0%0A           \n+1\n %0A%0A%0A%0A%0A   \n",
+            "lines": "82"
+        },
+        {
+            "label": "2025-10-17_15-31-14",
+            "content": "@@ -619,35 +619,32 @@\n = 0%0A            \n-if \n self.__hora %3C= 2\n@@ -643,52 +643,13 @@\n ora \n-%3C= 23:%0A                self.__hora += 1%0A    \n+=+ 1%0A\n     \n@@ -677,36 +677,32 @@\n 23:%0A            \n-    \n self.__hora = 0%0A\n@@ -697,25 +697,24 @@\n .__hora = 0%0A\n-%0A\n            %0A\n",
+            "lines": "83"
+        },
+        {
+            "label": "2025-10-17_15-36-02",
+            "content": "class Relogio:\n    def __init__(self):\n        self.__hora = 0\n        self.__min = 0\n        self.__seg = 0\n\n    def get_hora(self)-> int:\n        return self.__hora\n    def get_min(self)-> int:\n        return self.__min\n    def get_seg(self)-> int:\n        return self.__seg\n    \n    def nextSecond (self):\n        self.__seg += 1\n        if self.__seg > 59:\n            self.__seg = 0\n            self.__min += 1\n                \n    def nextSecond (self):\n        self.__seg += 1\n        if self.__seg > 59:\n            self.__seg = 0\n            self.__min += 1\n        if self.__min > 59:\n            self.__min = 0\n            if self.__hora <= 23:\n                self.__hora += 1\n            if self.__hora > 23:\n                self.__hora = 0\n\n           \n\n\n\n\n    def set_hora(self, valor: int):\n        if valor > 23:\n            print(\"fail: hora invalida\")\n        elif valor >=0 and valor <=23: \n            self.__hora = valor\n    def set_min(self, valor: int):\n        if valor > 59:\n            print(\"fail: minuto invalido\")\n        elif valor >= 0 and valor <=59: \n            self.__min = valor\n    def set_seg(self, valor: int):\n        if valor > 59:\n            print(\"fail: segundo invalido\")\n        elif valor >= 0 and valor <=59: \n            self.__seg = valor\n    \n    def __str__ (self) -> str:\n        return f\"{self.__hora:02}:{self.__min:02}:{self.__seg:02}\"\n    \ndef main():\n    time = Relogio()\n    while True: #loop infinito \n        line: str = input()\n        print (\"$\"+line)\n        args: list[str]=line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0]==\"show\":\n            print(time)\n\n        elif args[0]==\"set\":\n            if len(args) == 4: \n                hora = int(args[1])\n                minuto = int(args[2])\n                seg = int(args[3])\n                time.set_hora(hora)\n                time.set_min(minuto)\n                time.set_seg(seg)\n\n        elif args[0] ==\"next\":\n            time.nextSecond()\n\n        else:\n            print(\"fail: comando invalido\")\n\n            \nif __name__ == \"__main__\":\n    main()\n",
+            "lines": "85"
         }
     ]
 }

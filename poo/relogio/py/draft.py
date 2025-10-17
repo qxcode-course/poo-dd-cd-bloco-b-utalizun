@@ -11,6 +11,24 @@ class Relogio:
     def get_seg(self)-> int:
         return self.__seg
     
+    def nextSecond (self):
+        self.__seg += 1
+        if self.__seg > 59:
+            self.__seg = 0
+            self.__min += 1
+                
+    def nextSecond (self):
+        self.__seg += 1
+        if self.__seg > 59:
+            self.__seg = 0
+            self.__min += 1
+        if self.__min > 59:
+            self.__min = 0
+            if self.__hora <= 23:
+                self.__hora += 1
+            if self.__hora > 23:
+                self.__hora = 0
+
     def set_hora(self, valor: int):
         if valor > 23:
             print("fail: hora invalida")
@@ -26,7 +44,7 @@ class Relogio:
             print("fail: segundo invalido")
         elif valor >= 0 and valor <=59: 
             self.__seg = valor
-
+    
     def __str__ (self) -> str:
         return f"{self.__hora:02}:{self.__min:02}:{self.__seg:02}"
     
@@ -41,6 +59,7 @@ def main():
             break
         elif args[0]=="show":
             print(time)
+
         elif args[0]=="set":
             if len(args) == 4: 
                 hora = int(args[1])
@@ -49,6 +68,13 @@ def main():
                 time.set_hora(hora)
                 time.set_min(minuto)
                 time.set_seg(seg)
+
+        elif args[0] =="next":
+            time.nextSecond()
+
+        else:
+            print("fail: comando invalido")
+
             
 if __name__ == "__main__":
     main()
