@@ -7,7 +7,12 @@
         },
         {
             "label": "2025-10-07_01-14-16",
-            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho = 0\n\n    def getTamanho(self):\n        return self.__tamanho\n    \n    def setTamanho(self, valor: int ):\n        \n        if valor > 19 and valor < 51 and valor % 2 == 0:\n            self.__tamanho = valor\n            print('tamanho certo')\n            return\n        \n        print('tamanho errado, tente outro valor')\n\nhavaianas = Chinela()\n\nwhile havaianas.getTamanho() == 0:\n    print(\"\\nDigite o tamanho da chinela:\")\n    size = int(input())\n    havaianas.setTamanho(size)\n\nprint (\"\\nOpa cumpade tu comprou uma chinela tamanho: \", havaianas.getTamanho(),\"\\n\")",
+            "content": "@@ -284,24 +284,21 @@\n nt('\n-%C3%93tima escolha!%5Cn\n+tamanho certo\n ')%0A \n@@ -376,11 +376,8 @@\n alor\n- %5Cn\n ')%0A%0A\n@@ -430,24 +430,24 @@\n nho() == 0:%0A\n-\n     print(%22D\n@@ -445,16 +445,18 @@\n  print(%22\n+%5Cn\n Digite o\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-10-17_23-20-26",
+            "content": "class Chinela:\n    def __init__(self):\n        self.__tamanho = 0\n\n    def getTamanho(self):\n        return self.__tamanho\n    \n    def setTamanho(self, valor: int ):\n        \n        if valor > 19 and valor < 51 and valor % 2 == 0:\n            self.__tamanho = valor\n            print('\u00d3tima escolha!\\n')\n            return\n        \n        print('tamanho errado, tente outro valor \\n')\n\nhavaianas = Chinela()\n\nwhile havaianas.getTamanho() == 0:\n    print(\"Digite o tamanho da chinela:\")\n    size = int(input())\n    havaianas.setTamanho(size)\n\nprint (\"\\nOpa cumpade tu comprou uma chinela tamanho: \", havaianas.getTamanho(),\"\\n\")",
             "lines": "24"
         }
     ]
